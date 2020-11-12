@@ -34,7 +34,7 @@ Attempts to create an account. If successful, the .token attribute is set, and f
 ### Session.gateway()
 Briefly connects to the gateway to unlock additional functionalities.
 
-### Session.post_analyics(events: List[AnalyticsEvent])
+### Session.post_analytics(events: List[AnalyticsEvent])
 
 ### Session.refresh_client_uuid()
 
