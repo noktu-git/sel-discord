@@ -25,7 +25,7 @@ Only some specific API endpoints have methods of their own.
 ### Session(user_agent, proxy_url=None)
 Initialize a new session/client.
 
-### Session.request(method, url, json=None, headers=None)
+### Session.request(method, url, json=None, headers=None, context=None)
 Wrapper for .sel.request, includes all necessary Discord headrs.
 
 ### Session.register(username, **signup_params)
