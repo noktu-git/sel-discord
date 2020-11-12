@@ -16,7 +16,11 @@ user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTM
 with seldiscord.Session(user_agent) as dsc:
   # now that TLS fingerprinting has been evaded, Discord is likely
   # to present no captchas while creating an account
-  print(dsc.register(username="234ixcmoas"))
+  print(dsc.register(
+    username="234ixcmoas",
+    # fun fact: you can include an invite param., and the account will auto-join it
+    # invite="fortnite"
+  ))
 ```
 
 # Documentation
