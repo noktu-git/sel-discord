@@ -68,7 +68,7 @@ class Session:
                 http_proxy_port=purl.port
             )
         ws = websocket.create_connection(
-            f"wss://gateway.{self.host}/?encoding=json&v=8&compress=zlib-stream",
+            f"wss://gateway.discord.gg/?encoding=json&v=8&compress=zlib-stream",
             **proxy_config,
             origin=f"https://{self.host}",
             header={
