@@ -26,7 +26,7 @@ Only some specific API endpoints have methods of their own.
 Initialize a new session/client.
 
 ### Session.request(method, url, json=None, headers=None, context=None)
-Wrapper for .sel.request, includes all necessary Discord headrs.
+Wrapper for .sel.request, includes all necessary Discord headers.
 
 ### Session.register(username, **signup_params)
 Attempts to create an account. If successful, the .token attribute is set, and further API requests will be authenticated.
