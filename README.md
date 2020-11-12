@@ -4,7 +4,7 @@ Discord API client based on my [sel-requests](https://github.com/h0nde/sel-reque
 # Setup
 ```bash
 pip install -U git+https://github.com/h0nde/sel-requests.git
-pip install -U git+https://github.com/h0nde/sel-discord-.git
+pip install -U git+https://github.com/h0nde/sel-discord.git
 ```
 
 # Usage
