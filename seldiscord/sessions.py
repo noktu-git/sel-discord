@@ -81,7 +81,7 @@ class Session:
         )
         ws.recv()
         ws.send(json.dumps(
-            {"op":2,"d":{"token":self.token,"capabilities":61,"properties":self._get_properties(),"presence":{"status":"online","since":0,"activities":[],"afk":False},"compress":False,"client_state":{"guild_hashes":{},"highest_last_message_id":"0","read_state_version":0,"user_guild_settings_version":-1}}},
+            {"op":2,"d":{"token":self.token,"capabilities":61,"properties":self._get_properties(False),"presence":{"status":"online","since":0,"activities":[],"afk":False},"compress":False,"client_state":{"guild_hashes":{},"highest_last_message_id":"0","read_state_version":0,"user_guild_settings_version":-1}}},
             separators=(",", ":")
         ).encode("UTF-8"))
         ws.recv()
@@ -167,7 +167,7 @@ class Session:
     def _use_x_track_header(self) -> bool:
         return self.build_number == 9999
 
-    def _get_properties(self) -> dict:
+    def _get_properties(self, encode=True) -> dict:
         pua = user_agents.parse(self.user_agent)
         device = None
         if not pua.device.family in [None, "Other"]:
@@ -186,6 +186,7 @@ class Session:
             "client_build_number": self.build_number,
             "client_event_source": None
         }
-        data = json.dumps(data, separators=(",", ":"))
-        data = base64.b64encode(data.encode("UTF-8")).decode("UTF-8")
+        if encode:
+            data = json.dumps(data, separators=(",", ":"))
+            data = base64.b64encode(data.encode("UTF-8")).decode("UTF-8")
         return data
