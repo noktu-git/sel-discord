@@ -22,6 +22,7 @@ with seldiscord.Session(user_agent) as dsc:
     # you can include an invite param., and the account will auto-join it
     # invite="fortnite"
   ))
+  dsc.gateway()
 ```
 
 # Documentation
