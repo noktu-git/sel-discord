@@ -34,7 +34,6 @@ class Session:
 
         self._sel = selrequests.Session(proxy_url, user_agent)
         self._sel.set_origin(f"https://{self.host}/")
-        self.setup()
 
     def __enter__(self):
         return self
