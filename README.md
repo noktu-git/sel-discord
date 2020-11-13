@@ -19,8 +19,9 @@ with seldiscord.Session(user_agent) as dsc:
   # to present no captchas while creating an account
   print(dsc.register(
     username="234ixcmoas",
-    # you can include an invite param., and the account will auto-join it
-    # invite="fortnite"
+    #email="support@discordapp.com",
+    #password="hunter2",
+    #invite="fortnite"
   ))
   dsc.gateway()
 ```
