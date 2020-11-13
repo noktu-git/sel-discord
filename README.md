@@ -30,6 +30,9 @@ Only some specific API endpoints have methods of their own.
 ### Session(user_agent, proxy_url=None)
 Initialize a new session/client.
 
+### Session.setup()
+Grab fingerprints and stuff.
+
 ### Session.request(method, url, json=None, headers=None, context=None)
 Wrapper for .sel.request, includes all necessary Discord headers.
 
