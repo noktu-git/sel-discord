@@ -1,4 +1,6 @@
 # sel-discord
+this is an archive of [sel-requests](https://github.com/h0nde/sel-requests), and this repo is years old so you probably won't have much luck.
+
 Discord API client based on my [sel-requests](https://github.com/h0nde/sel-requests) module, primarly focused on evading Discord's TLS fingerprint bot detection.
 
 # Setup
